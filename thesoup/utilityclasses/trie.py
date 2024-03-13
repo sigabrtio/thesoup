@@ -1,3 +1,6 @@
+from typing import Optional, List
+
+
 class TrieNode:
     """
     This class implements a node in a trie. It's usage outside of a trie is not recommended although no one is
@@ -14,7 +17,7 @@ class TrieNode:
         """
         Constructor. Needs no parameters
         """
-        self.storage = [None] * TrieNode.ASCII_CHARSET_SIZE
+        self.storage:  List[Optional[TrieNode]] = [None] * TrieNode.ASCII_CHARSET_SIZE
         self.end_marker = False
 
     def __contains__(self, char: str) -> bool:
@@ -27,10 +30,10 @@ class TrieNode:
             raise ValueError("'{}' is not a single character.".format(char))
         return self.storage[ord(char)] is not None
 
-    def __getitem__(self, char: str) -> 'TrieNode':
+    def __getitem__(self, char: str) -> Optional['TrieNode']:
         """
         This implements the index into the object. It returns the trie node object in the index corresponding to
-        the ASCII value of the character. `None` would indicate absence of that character in the node object.
+        the ASCII value of the character. `None` would indicate the absence of that character in the node object.
         :param char:
         :return:
         """
@@ -82,7 +85,7 @@ class Trie:
             Trie._insert_callback(word, start_pos + 1, node[word[start_pos]])
 
     @staticmethod
-    def _search_callback(word: str, pos: int, node: TrieNode) -> bool:
+    def _search_callback(word: str, pos: int, node: TrieNode) -> Optional[TrieNode]:
         if pos == len(word):
             return node
         else:

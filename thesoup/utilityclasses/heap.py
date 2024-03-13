@@ -92,8 +92,8 @@ class Heap (ABC):
 
     def build_heap(self):
         """
-        This re-builds the full heap. This is necessary if sometime there are many key updates for the heap elements
-        externally and it is necessary to rebuild the whole heap.
+        This re-builds the full heap. This is necessary if sometimes there are many key updates for the heap elements
+        externally, and it is necessary to rebuild the whole heap.
         """
         for i in range(len(self) // 2, -1, -1):
             self._heapify(i)
