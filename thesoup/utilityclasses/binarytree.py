@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
-
+from typing import Any, Optional
 
 class _BinaryTreeElement:
     def __init__(self, val):
-        self.val = val
-        self.count = 1
-        self.right = None
-        self.left = None
-        self.parent = None
+        self.val: Any = val
+        self.count: int = 1
+        self.right: Optional['_BinaryTreeElement'] = None
+        self.left: Optional['_BinaryTreeElement'] = None
+        self.parent: Optional['_BinaryTreeElement'] = None
 
     def __call__(self, *args, **kwargs):
         return self.val
@@ -74,11 +74,11 @@ class BinarySearchTree (BinaryTree):
     A BST implementation of a binary tree
     """
     def __init__(self):
-        self.root = None
-        self.num = 0
+        self.root: Optional[_BinaryTreeElement] = None
+        self.num: int = 0
 
     @staticmethod
-    def _insert(root: _BinaryTreeElement, element):
+    def _insert(root: _BinaryTreeElement, element: Any):
         if element > root():
             if root.right is not None:
                 BinarySearchTree._insert(root.right, element)
@@ -95,7 +95,7 @@ class BinarySearchTree (BinaryTree):
             root.count += 1
 
     @staticmethod
-    def _search(root: _BinaryTreeElement, item):
+    def _search(root: _BinaryTreeElement, item: Any):
         iterator = root
         while iterator is not None:
             if iterator() == item:
