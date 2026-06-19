@@ -4,9 +4,9 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![PyPI version](https://badge.fury.io/py/thesoup.svg)](https://badge.fury.io/py/thesoup)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
-[![Docs](https://img.shields.io/badge/docs-github%20pages-blue)](https://amartya00.github.io/thesoup/)
+[![Docs](https://img.shields.io/badge/docs-github%20pages-blue)](https://sigabrtio.github.io/thesoup/)
 
-Full API documentation is available at [amartya00.github.io/thesoup](https://amartya00.github.io/thesoup/).
+Full API documentation is available at [sigabrtio.github.io/thesoup](https://sigabrtio.github.io/thesoup/).
 
 ---
 
