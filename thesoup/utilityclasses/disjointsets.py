@@ -1,6 +1,11 @@
 class DisjointSets:
     """
     This class implements the disjoint sets data structure.
+    Initially we start off with a list of discrete elements, each element being its own set.
+
+    Supported operations:
+    find_set: Returns the set leader of a certain element
+    union: Merges the set of which the second element is a part of into the first set.
     """
     def __init__(self, items: list):
         self.set_map = dict(
