@@ -1,63 +1,79 @@
-# **The soup**
-A collection of python classes and functions.
+# The Soup
+### A collection of Python utility classes and functions.
 
-## Getting it
-#### Github
-Download it from GitHub with a `git clone https://github.com/amartya00/thesoup.git`
-Navigate to the root, and run all tests to ensure everything is working with `nose2 -w tst/ --nocapture`
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![PyPI version](https://badge.fury.io/py/thesoup.svg)](https://badge.fury.io/py/thesoup)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![Docs](https://img.shields.io/badge/docs-github%20pages-blue)](https://sigabrtio.github.io/thesoup/)
 
-Now install with `sudo pip3 install .`
+Full API documentation is available at [sigabrtio.github.io/thesoup](https://sigabrtio.github.io/thesoup/).
 
-#### PyPi
-This is available on [PyPi](https://pypi.org/project/thesoup/) as well. Do a `sudo pip3 install thesoup` to install.
+---
 
-**NOTE**: If you do not have nose tests, install it with `sudo pip3 install nose`
+## Installation
 
-**NOTE**: This is python3 only
+#### From PyPI
+```bash
+pip install thesoup
+```
+
+#### From source
+```bash
+git clone https://github.com/sigabrtio/thesoup.git
+cd thesoup
+pip install .
+```
+
+To run the tests:
+```bash
+pip install -e ".[test]"
+python -m nose2 --start-dir tst
+```
+
+---
 
 ## Components
+
 ### Classes
-It has the following utility classes:
-  - Graphs
-    - Abstract class for directed graph `DiGraph`
-    - Abstract class for directed mutable graph `MutableDiGraph`
-    - A mutable digraph implementation with adjacency list `AdjListGraph`
-    
-  - Heap
-    - Min heap `Minheap`
-    - Max heap `MaxHeap`
-    
-  - Binary trees
-    - BST `BinarySearchTree`
-    
-  - Trie (ASCII only)
 
-  - Sets
-    - A set that keeps track of the number of occurrences of repeated elements `CountSet` 
-    - A disjoint sets utility. See the [Wikipedia entry](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) `DisjointSets` for details on what it is
-    
-  - Utilities
-    - A result class, similar to Rust's `Result`.
+- **Graphs**
+  - `DiGraph` — abstract directed graph
+  - `MutableDiGraph` — abstract mutable directed graph
+  - `AdjListGraph` — adjacency-list implementation of `MutableDiGraph`
 
-## Functions
-It has the following utility functions
-  - Collection related
-    - Flatten a nested collection `flatten`
-    - Flatten a nested collection except the tuples `flatten_to_tuple`
-    - Find all subsequences of a list `subsequence`
-    - Foreach method that works on all collections `foreach`
-    - Group a collection into a map by some criteria `group_by`
-    
-  - Graph traversals
-    - Bread first search `bfs`
-    - Depth first search `dfs`
-    - Dijkstra `dijkstra`
-    - Specialized SP for DAGs `shortest_path_dag`
-    
-  - String related
-    - Test if 2 strings are anagrams `is_anagram`  
-    
-  - Other
-    - K-way merge `merge`
-    
-    
+- **Heap**
+  - `MinHeap`
+  - `MaxHeap`
+
+- **Binary Trees**
+  - `BinarySearchTree`
+
+- **Trie** (ASCII only)
+
+- **Sets**
+  - `CountSet` — set that tracks occurrence counts of repeated elements
+  - `DisjointSets` — disjoint-set / union-find structure ([Wikipedia](https://en.wikipedia.org/wiki/Disjoint-set_data_structure))
+
+- **Result**
+  - `Result` — a result type similar to Rust's `Result`
+
+### Functions
+
+- **Collections**
+  - `flatten` — flatten a nested collection
+  - `flatten_to_tuple` — flatten a nested collection, preserving tuples
+  - `subsequence` — find all subsequences of a list
+  - `foreach` — foreach that works on any collection
+  - `group_by` — group a collection into a map by some criteria
+
+- **Graph Traversals**
+  - `bfs` — breadth-first search
+  - `dfs` — depth-first search
+  - `dijkstra` — Dijkstra's shortest path
+  - `shortest_path_dag` — specialised shortest path for DAGs
+
+- **Strings**
+  - `is_anagram` — test if two strings are anagrams
+
+- **Other**
+  - `merge` — k-way merge

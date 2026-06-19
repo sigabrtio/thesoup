@@ -20,7 +20,7 @@ setup(
     description="A soup of random python utils",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/amartya00/thesoup",
+    url="https://github.com/sigabrtio/thesoup",
     author="Amartya Datta Gupta",
     author_email="amartya00@gmail.com",
     license='GPLv2',
@@ -36,8 +36,9 @@ setup(
     extras_require={
         'dev': [],
         'test': ["nose2"],
+        'docs': ["pdoc"],
     },
     project_urls={
-        "Source": "https://github.com/amartya00/thesoup"
+        "Source": "https://github.com/sigabrtio/thesoup"
     },
 )
