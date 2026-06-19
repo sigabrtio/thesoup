@@ -1,9 +1,9 @@
 # **The soup**
-A collection of python classes and functions.
+### A collection of python classes and functions.
 
 ## Getting it
 #### Github
-Download it from GitHub with a `git clone https://github.com/amartya00/thesoup.git`
+Download it from GitHub with a `git clone https://github.com/sigabrtio/thesoup.git`
 Navigate to the root, and run all tests to ensure everything is working with `nose2 -w tst/ --nocapture`
 
 Now install with `sudo pip3 install .`

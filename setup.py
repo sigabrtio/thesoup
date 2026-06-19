@@ -36,6 +36,7 @@ setup(
     extras_require={
         'dev': [],
         'test': ["nose2"],
+        'docs': ["pdoc"],
     },
     project_urls={
         "Source": "https://github.com/amartya00/thesoup"
