@@ -16,7 +16,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="thesoup",
-    version="1.01",
+    version="1.1.0",
     description="A soup of random python utils",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -34,7 +34,7 @@ setup(
     packages=["thesoup.utilityclasses", "thesoup.utilityfunctions"],
     install_requires=[],
     extras_require={
-        'dev': [],
+        'dev': ["python-semantic-release"],
         'test': ["nose2"],
         'docs': ["pdoc"],
     },
