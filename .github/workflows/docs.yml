@@ -28,7 +28,7 @@ jobs:
         run: pip install -e ".[docs]"
 
       - name: Generate docs
-        run: pdoc thesoup -o ./site
+        run: pdoc ./thesoup -o ./site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
