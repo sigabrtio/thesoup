@@ -5,3 +5,4 @@ build/
 dist/
 thesoup.egg-info/
 site/
+.claude/
