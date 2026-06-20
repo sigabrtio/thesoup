@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.3.0 (2026-06-20)
+
+### Features
+
+- **ci**: Wired in PyPi publishing
+  ([`3e5bd90`](https://github.com/sigabrtio/thesoup/commit/3e5bd90102a40b45ef544d601a335932ab6747df))
+
+
 ## v0.1.0 (2026-06-20)
 
 ### Bug Fixes
