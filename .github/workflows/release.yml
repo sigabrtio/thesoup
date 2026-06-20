@@ -25,6 +25,19 @@ jobs:
           python-version: "3.11"
 
       - name: Python Semantic Release
+        id: semantic_release
         uses: python-semantic-release/python-semantic-release@v9
         with:
           github_token: ${{ secrets.GH_TOKEN }}
+
+      - name: Build package
+        if: steps.semantic_release.outputs.released == 'true'
+        run: |
+          pip install build
+          python -m build
+
+      - name: Publish to PyPI
+        if: steps.semantic_release.outputs.released == 'true'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_TOKEN }}
