@@ -24,6 +24,6 @@ jobs:
           python-version: "3.11"
 
       - name: Python Semantic Release
-        uses: python-semantic-release/semantic-release@v9
+        uses: python-semantic-release/python-semantic-release@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
